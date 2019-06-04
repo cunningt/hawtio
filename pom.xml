@@ -185,10 +185,6 @@
 
   <modules>
     <module>bom</module>
-    <module>examples/springboot-authentication</module>
-    <module>examples/springboot</module>
-    <module>examples/springboot-1-authentication</module>
-    <module>examples/springboot-1</module>
     <module>hawtio-app</module>
     <module>hawtio-base</module>
     <module>hawtio-console-assembly</module>
@@ -204,8 +200,6 @@
     <module>hawtio-war</module>
     <module>platforms/hawtio-osgi-jmx</module>
     <module>platforms/karaf</module>
-    <module>platforms/springboot</module>
-    <module>platforms/springboot-1</module>
     <module>platforms/wildfly</module>
     <module>tooling/hawtio-junit</module>
     <module>tooling/hawtio-maven-plugin</module>
@@ -333,6 +327,36 @@
   </build>
 
   <profiles>
+    <profile>
+      <id>default</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <modules>
+        <module>examples/springboot</module>
+        <module>examples/springboot-authentication</module>
+        <module>examples/springboot-1</module>
+        <module>examples/springboot-1-authentication</module>
+        <module>platforms/springboot</module>
+        <module>platforms/springboot-1</module>
+      </modules>
+    </profile>
+    <profile>
+      <id>spring-boot-1</id>
+      <modules>
+        <module>examples/springboot-1-authentication</module>
+        <module>examples/springboot-1</module>
+        <module>platforms/springboot-1</module>
+      </modules>
+    </profile>
+    <profile>
+      <id>spring-boot-2</id>
+      <modules>
+        <module>examples/springboot-authentication</module>
+        <module>examples/springboot</module>
+        <module>platforms/springboot</module>
+      </modules>
+    </profile>
     <profile>
       <id>release</id>
       <properties>
