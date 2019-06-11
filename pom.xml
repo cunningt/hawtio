@@ -137,7 +137,7 @@
     <repository>
       <id>brew.jb.common</id>
       <name>Brew JBoss Common Repository</name>
-      <url>http://download.eng.bos.redhat.com/brewroot/repos/jb-common-build/latest/maven</url>
+      <url>https://download.eng.bos.redhat.com/brewroot/repos/jb-common-build/latest/maven</url>
       <snapshots>
         <enabled>false</enabled>
       </snapshots>
