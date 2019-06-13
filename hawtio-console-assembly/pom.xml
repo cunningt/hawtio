@@ -76,8 +76,7 @@
                           <goal>install-node-and-npm</goal>
                         </goals>
                         <configuration>
-                          <nodeVersion>v8.11.3</nodeVersion>
-                          <npmVersion>5.6.0</npmVersion>
+                          <nodeVersion>v10.16.0</nodeVersion>
                         </configuration>
                       </execution>
                       <execution>
@@ -86,8 +85,8 @@
                           <goal>install-node-and-yarn</goal>
                         </goals>
                         <configuration>
-                          <nodeVersion>v8.11.3</nodeVersion>
-                          <yarnVersion>v1.9.4</yarnVersion>
+                          <nodeVersion>v10.16.0</nodeVersion>
+                          <yarnVersion>v1.16.0</yarnVersion>
                         </configuration>
                       </execution>
                       <!-- Install npm/yarn dependencies -->
@@ -134,7 +133,7 @@
                         <goal>install-node-and-npm</goal>
                       </goals>
                       <configuration>
-                        <nodeVersion>v8.11.3</nodeVersion>
+                        <nodeVersion>v10.16.0</nodeVersion>
                       </configuration>
                     </execution>
                     <execution>
@@ -143,8 +142,8 @@
                         <goal>install-node-and-yarn</goal>
                       </goals>
                       <configuration>
-                        <nodeVersion>v8.11.3</nodeVersion>
-                        <yarnVersion>v1.9.4</yarnVersion>
+                        <nodeVersion>v10.16.0</nodeVersion>
+                        <yarnVersion>v1.16.0</yarnVersion>
                       </configuration>
                     </execution>
                     <!-- Prod fixes -->
