@@ -28,6 +28,8 @@ import org.slf4j.LoggerFactory;
  */
 public class ServletHelpers {
 
+    protected static final String HEADER_HAWTIO_FORBIDDEN_REASON = "Hawtio-Forbidden-Reason";
+
     private static final transient Logger LOG = LoggerFactory.getLogger(ServletHelpers.class);
 
     private static final String HEADER_WWW_AUTHENTICATE = "WWW-Authenticate";
@@ -38,11 +40,9 @@ public class ServletHelpers {
 
     public static void doForbidden(HttpServletResponse response, ForbiddenReason reason) {
         try {
-            byte[] contentBytes = new JSONObject().put("reason", reason).toString().getBytes("UTF-8");
             response.setStatus(HttpServletResponse.SC_FORBIDDEN);
-            response.setContentType("application/json");
-            response.setContentLength(contentBytes.length);
-            response.getOutputStream().write(contentBytes);
+            response.setContentLength(0);
+            response.setHeader(HEADER_HAWTIO_FORBIDDEN_REASON, reason.name());
             response.flushBuffer();
         } catch (IOException ioe) {
             LOG.debug("Failed to send forbidden response: {}", ioe);
